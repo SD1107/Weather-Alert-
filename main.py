@@ -39,8 +39,8 @@ for i in range(weather_parameretrs["cnt"]):
 if count==0:
     message = client.messages.create(
     body=f"It's going to rain today in {data["city"]["name"]}. Bring an ☂️.Have a nice day ahead!\n\n~Soumyadeep Dey😎",
-    from_="+19894798783",
-    to="+918334922370",
+    from_=os.getenv("FROM_MOB"),
+    to=os.getenv("TO_MOB"),
     )
 else:
     message = client.messages.create(
